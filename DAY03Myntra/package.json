@@ -1,0 +1,29 @@
+{
+  "name": "myntra",
+  "version": "1.0.0",
+  "description": "A clone of myntra",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiddhantLohakar/React.git"
+  },
+  "keywords": [
+    "React",
+    "Clone",
+    "Myntra"
+  ],
+  "author": "Siddhant Lohakar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiddhantLohakar/React/issues"
+  },
+  "homepage": "https://github.com/SiddhantLohakar/React#readme",
+  "dependencies": {
+    "parcel": "^2.16.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}
