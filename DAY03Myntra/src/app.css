@@ -3,6 +3,7 @@ body{
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(241, 241, 241);
 }
 
 
@@ -42,4 +43,46 @@ body{
     padding: 40px;
     gap: 15px;
     justify-content: center;
+}
+
+
+/* Header Styling */
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+
+}
+
+.options{
+    position: relative;
+}
+
+.btn, .pfp-btn{
+    border: none;
+    background-color: white;
+    font-weight: 600;
+    margin-right: 30px;
+}
+
+.profile{
+    position: relative;
+    right: 25px;
+    
+}
+
+.pfp-btn{
+    font-size: 14.333px;
+}
+
+.header input{
+     width: 450px;
+     padding: 10px;
+     position: relative;
+     right: 40px;
+     border: none;
+     background-color: rgb(243, 241, 241);
+     color: #5f626a;
+     border-radius: 5px;
 }
