@@ -16,7 +16,7 @@ function App()
        <>
             <Header/>
             <div className="cards">
-                {arr.map((value, index)=>  <Card key = {index} clothName = {value.clothName} Offer = {value.Offer}/>)}
+                {arr.map((value, index)=>  <Card key = {index} clothName = {value.clothName} Offer = {value.Offer} price={value.price} src={value.src}/>)}
             </div>
             <Footer/>
        </>

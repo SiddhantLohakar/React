@@ -32,12 +32,21 @@ body{
 
 .general-desc h2{
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .percentage-off h1{
     font-size: 27px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.price{
+    margin: 0;
+}
+
+.price h3{
+    margin-top: 8px;
 }
 
 .cards{
