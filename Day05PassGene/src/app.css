@@ -1,0 +1,36 @@
+/* CSS for body */
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#root{
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    min-width: 400px;
+    min-height: 200px;
+    color: rgb(35, 11, 113);
+}
+
+.inputs{
+    font-size: 17px;
+    display: flex;
+    gap: 10px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+}
+
+.length{
+    display: flex;
+    align-items: center;
+}
