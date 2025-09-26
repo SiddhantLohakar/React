@@ -1,0 +1,23 @@
+{
+  "name": "random-password-generator",
+  "version": "1.0.0",
+  "description": "Generates random password for the user",
+  "default": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Password",
+    "React",
+    "Random"
+  ],
+  "author": "Siddhant Lohakar",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}
