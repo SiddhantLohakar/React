@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+#root{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main{
+    background-color: orange;
+    padding: 20px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    align-items: center;
+}
+
+
+
+/* Buttons Styling */
+.color-btn-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: rgb(177, 175, 175);
+    padding: 15px;
+}
+
+.btn{
+    font-size: 18px;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: rgb(227, 226, 226);
+    cursor: pointer;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.yellow{
+    background-color: yellow;
+    color: blue;
+}
+
+.blue{
+    background-color: blue;
+}
+
+/* Increment Styling */
+
+h1{
+    color: blue;
+}
+
+.incre-decre-btn{
+    display: flex;
+    gap: 10px;
+}
+
+.incre, .decre{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: pink;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
