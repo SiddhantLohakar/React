@@ -4,24 +4,29 @@ import "./app.css"
 
 function App()
 {
-    const [passoword, setPassword] = useState("");
+    const [password, setPassword] = useState("");
+    const [length, setLength] = useState(10);
+    const [includeNumber, setIncludeNumber] = useState(false)
+    const [includeCharacter, setIncludeCharacter] = useState(false)
+
+
 
     return <>
-        <h1>Your Password: {passoword}</h1>
+        <h1>Your Password: {password}</h1>
         <div className="inputs">
             <div className="length">
-            <input type="range" name="password-length" id="length" />
+            <input type="range" name="password-length" id="length" value={length}/>
             <label htmlFor="length">Length: {length}</label>
             </div>
 
 
             <div>
-            <input type="checkbox" name="" id="number" />
+            <input type="checkbox" name="" id="number" defaultChecked={includeNumber}/>
             <label htmlFor="number">Number</label>
             </div>
 
             <div>
-            <input type="checkbox" name="" id="characters" />
+            <input type="checkbox" name="" id="characters" defaultChecked={includeCharacter}/>
             <label htmlFor="characters">Character</label>
             </div>
         </div>
