@@ -10,8 +10,17 @@ import arr from "./utils/data";
 // Body
 // Footer
 
+function sortArr()
+{
+    arr.sort((a,b)=>a.price-b.price);
+    ReactRoot.render(App());
+
+}
+
+
 function App()
 {
+
     return (
        <>
             <Header/>
@@ -19,6 +28,7 @@ function App()
                 {arr.map((value, index)=>  <Card key = {index} clothName = {value.clothName} Offer = {value.Offer} price={value.price} src={value.src}/>)}
             </div>
             <Footer/>
+            <button onClick={sortArr}>Sort</button>
        </>
     )
 
@@ -27,3 +37,4 @@ function App()
 
 const ReactRoot =  ReactDOM.createRoot(document.getElementById('root'));
 ReactRoot.render(App());
+
