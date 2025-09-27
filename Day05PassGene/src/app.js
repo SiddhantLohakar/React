@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import ReactDOM from "react-dom/client"
 import "./app.css"
 
@@ -9,8 +9,7 @@ function App()
     const [includeNumber, setIncludeNumber] = useState(false)
     const [includeCharacter, setIncludeCharacter] = useState(false)
 
-    function generatePassword()
-    {
+    const generatePassword = useCallback(()=>{
         let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
         if(includeNumber)
@@ -27,11 +26,11 @@ function App()
         }
 
         setPassword(pass);
-    }
+    },[includeNumber, includeNumber, includeCharacter])
 
     useEffect(()=>{
          generatePassword()
-    }, [length, includeCharacter, includeNumber])
+    }, [generatePassword])
    
 
 
