@@ -1,0 +1,23 @@
+{
+  "name": "github-profile-viewer",
+  "version": "1.0.0",
+  "description": "View github profiles",
+  "default": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Github",
+    "React",
+    "Profiles"
+  ],
+  "author": "Siddhant Lohakar",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}
