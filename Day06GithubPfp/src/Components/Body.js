@@ -1,8 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 
 function Body()
 {
     const [Profiles, setProfile] = useState([])
+    const [count, setCount] = useState(10)
+    const [name, setName] = useState("");
     // const Profile = [
     //     {
     //         "login": "mojombo",
@@ -27,35 +29,66 @@ function Body()
     //     },
     // ]
 
-     async function getProfile()
+     async function getProfile(count)
     {
-        const response = await fetch("https://api.github.com/users?per_page=10");
+        const response = await fetch(`https://api.github.com/users?per_page=${count}`);
         const users = await response.json();
 
         setProfile(users);
     }
 
+    const  getProfileByName = useCallback(async (name)=>{
+
+        if(name == "")
+        {
+            alert("empty names are not allowed");
+            return;
+        }
+
+        const response = await fetch(`https://api.github.com/search/users?q=${name}`)
+        const users = await response.json();
+       
+
+        setProfile(users.items);
+    })
+
+
+
     useEffect(()=>{
-        getProfile()
+        getProfile(10)
     },[])
 
     return (
-        <div className="cards">
-           {
-            Profiles.map((Profile)=>{
-                return(
-                    <div key={Profile.id} className="card">
-                            <img src= {Profile.avatar_url} alt="" />
-                            <div className="name">
-                                <h2>{Profile.login}</h2>
-                            </div>
-                            <div className="link">
-                                <a href={Profile.html_url} target="_blank">Visit Profile</a>
-                            </div>
-                    </div>
-                )
-            })
-           }
+        <div>
+            <div className="inputs">
+                <div className="input">
+                    <input type="number" placeholder="Enter the number of profiles" value={count} onChange={(e)=> setCount(e.target.value)}/>
+                    <button onClick={()=>{getProfile(count)}}>Get Profiles</button>
+                </div>
+                <div className="input">
+                    <input type="text" placeholder="Enter the name of user" value={name} onChange={(e)=>{setName(e.target.value)}}/>
+                    <button onClick={()=>{getProfileByName(name)}}>Get User</button>
+                </div>
+            </div>
+
+
+            <div className="cards">
+            {
+                Profiles.map((Profile)=>{
+                    return(
+                        <div key={Profile.id} className="card">
+                                <img src= {Profile.avatar_url} alt="" />
+                                <div className="name">
+                                    <h2>{Profile.login}</h2>
+                                </div>
+                                <div className="link">
+                                    <a href={Profile.html_url} target="_blank">Visit Profile</a>
+                                </div>
+                        </div>
+                    )
+                })
+            }
+            </div>
         </div>
     )
 }
