@@ -4,7 +4,8 @@ import {BrowserRouter, Routes, Route, Link} from "react-router"
 import  Home from "./Components/Home"
 import Contact from "./Components/Contact"
 import About from "./Components/About"
-import Meet from "./Components/Meet";
+import Profile from "./Components/Profile";
+import Me from "./Components/Me";
 
 function App()
 {
@@ -22,7 +23,8 @@ function App()
                     <Route path="/" element={<Home/>}/>
                     <Route path="/Contact" element={<Contact/>}/>
                     <Route path="/About" element={<About/>}>
-                        <Route path="Meet" element={<Meet/>}/>
+                        <Route index element={<Profile/>}/>
+                        <Route path=":name" element={<Me/>} />
                     </Route>
                 </Routes>
             
