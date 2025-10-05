@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client"
-
+import Counter from "./Components/Counter";
+import "./App.css"
 
 function App(){
     return (
-        <h1>Hello World</h1>
+       <>
+        <Counter/>
+       </>
     )
 }
 

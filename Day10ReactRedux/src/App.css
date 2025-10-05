@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 5px;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+#root{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h1{
+    font-size: 38px;
+}
+
+
